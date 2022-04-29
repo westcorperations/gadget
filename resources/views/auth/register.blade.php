@@ -100,7 +100,7 @@
                     <label for="lastname" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
 
                     <div class="col-md-6">
-                        <input id="lastname" type="text" class="form-control @error('Last Name') is-invalid @enderror"
+                        <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror"
                             name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname"
                             autofocus>
 
@@ -161,7 +161,7 @@
                     <label for="city"class="col-md-4 col-form-label text-md-end">{{__('City')}}</label>
                     <div class="col-md-6">
                         <input id="city" type="text" class="form-control @error('city') is-invalid @enderror"
-                        name="city" value="{{ old('city') }}"  autofocus="city" autofocus>
+                        name="city" value="{{ old('city') }}" required autofocus="city" autofocus>
 
 
                     @error('city')
@@ -175,7 +175,7 @@
                     <label for="state"class="col-md-4 col-form-label text-md-end">{{__('State')}}</label>
                     <div class="col-md-6">
                         <input id="state" type="text" class="form-control @error('State') is-invalid @enderror"
-                        name="" value="{{ old('state') }}"  autofocus="state" autofocus>
+                        name="" value="{{ old('state') }}"required  autofocus="state" autofocus>
 
 
                     @error('State')
@@ -188,8 +188,8 @@
                 <div class="row mb-3">
                     <label for="country"class="col-md-4 col-form-label text-md-end">{{__('Country')}}</label>
                     <div class="col-md-6">
-                        <input id="country" type="text" class="form-control @error('Country') is-invalid @enderror"
-                        name="country" value="{{ old('country') }}"  autofocus="country" autofocus>
+                        <input id="country" type="text" class="form-control @error('country') is-invalid @enderror"
+                        name="country" value="{{ old('country') }}" required autofocus="country" autofocus>
 
 
                     @error('country')
@@ -217,7 +217,7 @@
                     <label for="phone" class="col-md-4 col-form-label text-md-end">Phone Number</label>
 
                     <div class="col-md-6">
-                        <input id="phone" type="tel" class="form-control @error('dob') is-invalid @enderror"
+                        <input id="phone" type="tel" class="form-control @error('phone') is-invalid @enderror"
                             name="phone" value="{{ old('phone') }}" required autofocus="phone" autofocus>
 
 
