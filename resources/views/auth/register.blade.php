@@ -200,6 +200,20 @@
                     </div>
                 </div>
                 <div class="row mb-3">
+                    <label for="pincode"class="col-md-4 col-form-label text-md-end">{{__('Zipcode')}}</label>
+                    <div class="col-md-6">
+                        <input id="pincode" type="text" class="form-control @error('pincode') is-invalid @enderror"
+                        name="pincode" value="{{ old('pincode') }}" required autofocus="pincode" autofocus>
+
+
+                    @error('pincode')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                </div>
+                <div class="row mb-3">
                     <label for="dob" class="col-md-4 col-form-label text-md-end">Date of birth</label>
                     <div class="col-md-6">
                         <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob"

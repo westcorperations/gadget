@@ -61,6 +61,7 @@ class RegisterController extends Controller
             'country' => ['required'],
             'city' => ['required'],
             'dob'=>['required'],
+            'pincode'=>['required'],
             // 'gender'=>['required'],
 
         ]);
@@ -86,6 +87,7 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'city' => $data['city'],
             'dob' => $data['dob'],
+            'pincode' => $data['pincode'],
             // 'gender' => $data['gender'],
         ]);
     }

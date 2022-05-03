@@ -28,6 +28,7 @@ class User extends Authenticatable
         'state',
         'country',
         // 'dob',
+        'pincode',
         'phone',
         'dob'
 
