@@ -75,7 +75,7 @@
 
 
     </div>
-    <div class="login" style="background-image:url('assets{{ '/image/loginbg.jpg' }}')">
+    <div class="login" style="background-image:url('assets{{ '/image/loginbg.jpg' }}');">
         <div class="login-box pt-3">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
@@ -143,11 +143,11 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="address2" class="col-md-4 col-form-label text-md-end">Address2 (optional)</label>
+                    <label for="address2" class="col-md-4 col-form-label text-md-end">Address2 </label>
 
                     <div class="col-md-6">
                         <input id="address2" type="text" class="form-control @error('address') is-invalid @enderror"
-                            name="address2" value="{{ old('address2') }}"  autofocus="address2" autofocus>
+                            name="address2" value="{{ old('address2') }}"required  autofocus="address2" autofocus>
 
 
                         @error('address')
@@ -174,11 +174,11 @@
                 <div class="row mb-3">
                     <label for="state"class="col-md-4 col-form-label text-md-end">{{__('State')}}</label>
                     <div class="col-md-6">
-                        <input id="state" type="text" class="form-control @error('State') is-invalid @enderror"
-                        name="" value="{{ old('state') }}"required  autofocus="state" autofocus>
+                        <input id="state" type="text" class="form-control @error('state') is-invalid @enderror"
+                        name="state" value="{{ old('state') }}"required  autofocus="state" autofocus>
 
 
-                    @error('State')
+                    @error('state')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
