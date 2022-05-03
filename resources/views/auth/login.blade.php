@@ -10,14 +10,14 @@
 
     <title>{{ config('app.name', 'Gadget') }}</title>
 
-    
+
     <!-- Styles -->
 
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/flickity.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     {{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> --}}
-    
+
 </head>
 
 <body onload="slider()">
@@ -41,18 +41,18 @@
                 <a href="#">Account</a>
                 <div class="dropdown-content">
                     <a href="{{ route('register') }}"> {{ __('Register') }}</a>
-                    
-           
+
+
                 </div>
             </div>
-           
+
 
 
             <div class="navlink d-none d-md-block">
                 <a href="#">
                     About Us</a>
             </div>
-            
+
         </div>
 
         </div>
@@ -64,10 +64,9 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <h5 class="text-center">Account</h5>
         <a href="{{  route('register')   }}" class="navlink "><span><img src="images/caret-right (1).svg" alt=""></span> {{ __('Register')}}</a>
-        <h5 class="text-center">Categories</h5>
-       <a href="index.html" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span> Home </a>
+       <a href="{{url('/')}}" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span> Home </a>
         <a href="#" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span>About Us </a>
-        
+
 
 
     </div>
@@ -81,8 +80,8 @@
         @csrf
 
         <img src="images/abstract-user-flat-4.svg" alt="" srcset="" class="d-lg-none ">
-        <label for="email"class="fs-lg-4 fs-5 pt-3 form-label"> {{ __('Email') }}</label> <br> 
-        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" 
+        <label for="email"class="fs-lg-4 fs-5 pt-3 form-label"> {{ __('Email') }}</label> <br>
+        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
         value="{{ old('email') }}" required autocomplete="email" autofocus>
 
         @error('email')
@@ -90,13 +89,13 @@
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
-   
-    
+
+
         <label for="password"class="fs-5  form-label" >{{__('Password')}}</label> <br>
         <input type="password" name="password" id="password" class=" form-control @error( 'password') is-invalid @enderror"
         value="{{ old('password') }}" required >
 <div>
-        <button type="submit" class=" d-inline btn-success"> {{ __('Login') }}</button> 
+        <button type="submit" class=" d-inline btn-success"> {{ __('Login') }}</button>
         <button class=" btn-primary"><a href="{{  route('register')   }}"class="text-decoration-none text-light">{{__('Register')}}</a></button></div> <br>
         <div class="forgot-pswd ">
         <a href=""class="">Forgot password?</a></span></small>
@@ -110,7 +109,7 @@
 
     <!-- <div>
         d
-    </div> 
+    </div>
  -->
 
 

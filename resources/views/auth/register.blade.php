@@ -67,8 +67,8 @@
         <h5 class="text-center">Account</h5>
         <a href="{{ route('register') }}" class="navlink "><span><img src="images/caret-right (1).svg"
                     alt=""></span> {{ __('Register') }}</a>
-        <h5 class="text-center">Categories</h5>
-        <a href="index.html" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span> Home
+
+        <a href="{{url('/')}}" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span> Home
         </a>
         <a href="#" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span>About Us </a>
 

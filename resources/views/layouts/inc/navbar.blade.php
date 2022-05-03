@@ -52,9 +52,9 @@
       <div class="navlink d-none d-lg-block dropdown-toggle dropdown">
         <a href="">Category</a>
         <div class="dropdown-content">
-          <a href="category.html">Phones</a>
-          <a href="category.html">Laptop</a>
-          <a href="category.html">Accessories</a>
+          <a href="{{ url('category/phones') }}">Phones</a>
+          <a href="{{ url('category/laptop') }}">Laptop</a>
+          <a href="{{ url('category/Accessories') }}">Accessories</a>
         </div>
       </div>
       <div class="navlink d-none d-lg-block">
@@ -83,7 +83,7 @@
        <a href="{{url('cart')}}"> <img src="/images/shopping-cart.png" alt="cart" class="">
         <span class='badge badge-warning cartcount' id='lblCartCount'>0</span>
 </a>
- 
+
       </div>
 
     </div>
@@ -126,9 +126,9 @@
                   @endguest
 
     <h5 class="text-center">Categories</h5>
-    <a href="category.html" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span>Phone </a>
-    <a href="category.html" class="navlink "><span><img src="images/caret-right (1).svg" alt=""></span>Computers</a>
-    <a href="category.html" class="navlink "><span><img src="images/caret-right (1).svg" alt=""></span>Accessories</a>
+    <a href="{{ url('category/phone') }}" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span>Phone </a>
+    <a href="{{ url('category/laptop') }}" class="navlink "><span><img src="images/caret-right (1).svg" alt=""></span>Computers</a>
+    <a href="{{ url('category/Accessories') }}" class="navlink "><span><img src="images/caret-right (1).svg" alt=""></span>Accessories</a>
     <h5 class="text-center">Others</h5>
     <a href="#" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span>About Us </a>
     <a href="{{url('/')}}" class="navlink "> <span><img src="images/caret-right (1).svg" alt=""></span> Home </a>

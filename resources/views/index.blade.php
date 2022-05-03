@@ -67,6 +67,11 @@
             <div class="content">
 
                 <div class="carousel" data-flickity='{ "wrapAround": true, "contain": true}'>
+                    @empty($phones)
+                    <div class="phone_data">
+                        <h3>No Product Available!</h3>
+                    </div>
+                    @endempty
                     @foreach ($phones as $phone)
                         <div class="phone_data">
                             <div class="card ">
@@ -119,6 +124,11 @@
         </div>
         <div class="content">
             <div class="carousel " data-flickity='{ "wrapAround": true, "contain": true}'>
+                @empty($laptops)
+                    <div class="phone_data">
+                        <h3>No Product Available!</h3>
+                    </div>
+                    @endempty
                 @foreach ($laptops as $laptop)
                     <a href="{{ url('product/' . $laptop->id) }}">
 
@@ -163,6 +173,11 @@
         </div>
         <div class="content">
             <div class="carousel " data-flickity='{ "wrapAround": true, "contain": true}'>
+                @empty($assets)
+                    <div class="phone_data">
+                        <h3>No product Available!</h3>
+                    </div>
+                    @endempty
                 @foreach ($assets as $asset)
                     <a href="{{ url('product/' . $asset->id) }}">
 
@@ -190,46 +205,6 @@
             </div>
         </div>
         @endforeach
-        <div class="card ">
-            <div class="card-header ">
-                <span class="product-name fs-6 fw-bolder">Product Name</span><br>
-                <span class="product-brand fs-6 fw-bold">Brand</span>
-            </div>
-
-            <div class="card-img">
-                <img src="images/laptopcell.png" alt="" class="carousel-cell">
-            </div>
-            <div class="card-footer">
-                <div class="product-price">
-                    <span class="fs-6 fw-bolder">$300</span> <br>
-                    <span class=" fw-bolder "> <small>Price</small> </span>
-                </div>
-                <div class="product-icon">
-                    <button class="btn  btn-outline-dark "> <a href="#">
-                            <img src="images/shopping-cart.png" alt=""> </a></button>
-                </div>
-            </div>
-        </div>
-        <div class="card ">
-            <div class="card-header ">
-                <span class="product-name fs-6 fw-bolder">Product Name</span><br>
-                <span class="product-brand fs-6 fw-bold">Brand</span>
-            </div>
-
-            <div class="card-img">
-                <img src="images/mp3player.png" alt="" class="carousel-cell">
-            </div>
-            <div class="card-footer">
-                <div class="product-price">
-                    <span class="fs-6 fw-bolder">$300</span> <br>
-                    <span class=" fw-bolder "> <small>Price</small> </span>
-                </div>
-                <div class="product-icon">
-                    <button class="btn  btn-outline-dark "> <a href="#">
-                            <img src="images/shopping-cart.png" alt=""> </a></button>
-                </div>
-            </div>
-        </div>
 
     </div>
 
