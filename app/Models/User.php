@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'lastname',
+        'pincode',
         'email',
         'password',
         'address',
@@ -28,7 +29,7 @@ class User extends Authenticatable
         'state',
         'country',
         // 'dob',
-        'pincode',
+
         'phone',
         'dob'
 
