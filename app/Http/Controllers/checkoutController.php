@@ -70,7 +70,7 @@ return view('checkout', compact('cartitems'));
         }
 if (Auth::user()->address2 == NULL) {
     $user= User::where('id',Auth::id())->first();
-    $user->name = $request->input('firstname');
+    $user->name = $request->input('name');
     $user->lastname = $request->input('lastname');
     $user->phone = $request->input('phone');
     $user->address = $request->input('address1');

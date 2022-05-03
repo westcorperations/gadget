@@ -84,8 +84,8 @@
                     <label for="Name" class="col-md-4 col-form-label text-md-end">{{ __('First Name') }}</label>
 
                     <div class="col-md-6">
-                        <input id="firstname" type="text" class="form-control @error('first Name') is-invalid @enderror"
-                            name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname"
+                        <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror"
+                            name="name" value="{{ old('firstname') }}" required autocomplete="firstname"
                             autofocus>
 
                         @error('firstname')
@@ -146,7 +146,7 @@
                     <label for="address2" class="col-md-4 col-form-label text-md-end">Address2 </label>
 
                     <div class="col-md-6">
-                        <input id="address2" type="text" class="form-control @error('address') is-invalid @enderror"
+                        <input id="address2" type="text" class="form-control @error('address2') is-invalid @enderror"
                             name="address2" value="{{ old('address2') }}"required  autofocus="address2" autofocus>
 
 
@@ -274,8 +274,9 @@
                     </div> <br>
 
                 </div>
-        </div>
-        </form>
+       </form>
+     </div>
+
     </div>
 
 

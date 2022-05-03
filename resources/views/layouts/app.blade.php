@@ -13,9 +13,9 @@
 
     <!-- Styles -->
 
-    <link href="{{ secure_asset('frontend/css/style.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('frontend/css/flickity.min.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/flickity.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     {{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> --}}
 
 </head>
