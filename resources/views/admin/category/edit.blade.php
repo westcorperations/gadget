@@ -14,12 +14,12 @@
             <div class="row">
                 <div class="col-md-6  col-6 mb-3">
                     <label for=""> Name </label>
-                    <input type="text" name="name" class="form-control" value="{{$category->name}}">
+                    <input type="text" name="name" class="form-control" required value="{{$category->name}}">
                 </div>
 
                 <div class="col-md-6 col-6 mb-3">
                     <label for=""> Slug </label>
-                    <input type="text" name="slug" class="form-control" value="{{$category->description}}">
+                    <input type="text" name="slug" class="form-control" required value="{{$category->description}}">
                 </div>
             </div>
 
@@ -29,14 +29,14 @@
                 @endif
                 <div class="col-md-12 col-12 mb-3">
                     <label for="">image</label>
-                    <input type="file" name="image" value="{{$category->image}}" class="form-control">
+                    <input type="file" name="image" required value="{{$category->image}}" class="form-control">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12 col-12 mb-3">
                     <label for="">Description</label>
-                    <textarea name="description" rows="3" class="form-control">{{$category->description}}</textarea>
+                    <textarea name="description" rows="3" required class="form-control">{{$category->description}}</textarea>
                 </div>
             </div>
 
@@ -57,21 +57,21 @@
 
                 <div class="col-md-12 mb-3">
                     <label for=""> Meta-Title </label>
-                    <textarea name="meta_title" rows="3" class="form-control">{{$category->meta_title}}</textarea>
+                    <textarea name="meta_title" rows="3" required class="form-control">{{$category->meta_title}}</textarea>
                 </div>
             </div>
             <div class="row">
 
                 <div class="col-md-12 mb-3">
                     <label for=""> Meta-Description </label>
-                    <textarea name="meta_descrip" rows="3" class="form-control">{{$category->meta_descrip}}</textarea>
+                    <textarea name="meta_descrip" rows="3" required class="form-control">{{$category->meta_descrip}}</textarea>
                 </div>
             </div>
             <div class="row">
 
                 <div class="col-md-12 mb-3">
                     <label for=""> Meta-Keywords </label>
-                    <textarea name="meta_keyword" rows="3" class="form-control">{{$category->meta_keyword}}</textarea>
+                    <textarea name="meta_keyword" rows="3" required class="form-control">{{$category->meta_keyword}}</textarea>
                 </div>
             </div>
 
