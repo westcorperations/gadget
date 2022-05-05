@@ -42,8 +42,11 @@ Route::post('proceed-to-pay', [CheckoutController::class, 'proceedtopay']);
 Route::get('user-dashboard',[UserController::class, 'index']);
 Route::get('view-order/{id}', 'UserController@vieworder');
 Route::get('view-profile', 'UserController@viewprofile');
+Route::get('view-password', 'UserController@viewpassword');
 
 Route::put('update-profile', 'UserController@updateprofile');
+Route::post('update-password', 'UserController@changepassword');
+
 
 });
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);

@@ -2,7 +2,11 @@
  @section('content')
         <div class="card text-center"style="margin-top:80px;">
              <header class="card-header bg-primary text-white">
-                 <h6>user profile</h6>
+                <nav class="breadcrumb text-white">
+                    <a class="breadcrumb-item text-white" href="{{url('view-password')}}">Change Password</a>
+                    <a class="breadcrumb-item text-white" href="#">orders</a>
+                    <span class="breadcrumb-item active text-white">update profile</span>
+                </nav>
              </header>
           <div class="card-body">
               <form action="{{url('update-profile')}}" method="post">
@@ -167,15 +171,7 @@
 
 
 
-                <div class="row mb-3">
-                    <label for="password"
-                        class="col-md-4 col-form-label text-md-end">{{ __('New Password') }}</label>
 
-                    <div class="col-md-6">
-                        <input id="password-confirm" type="password" class="form-control" name="password"
-                           required value="{{Auth::user()->password}}">
-                    </div>
-                </div>
 <button type="submit"class="btn btn-primary ">Update</button>
 
 

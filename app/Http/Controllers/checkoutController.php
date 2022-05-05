@@ -100,6 +100,7 @@ return redirect('/')->with('Status', 'Order Placed Successfull');
     {
 $cartitems = Cart::where('user_id',Auth::id())->get();
 $total_price = 0;
+
 foreach($cartitems as $items)
 {
     $total_price+=$items->product->selling_price * $items->product_qty;
