@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\checkoutController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\pagesController;
 
@@ -36,8 +36,8 @@ Route::get('load-cart-data','CartController@cartcount');
 Route::middleware(['auth'])->group(function () {
 Route::get('cart',  'CartController@viewcart');
 Route::get('checkout',[checkoutController::class,'index']);
-Route::post('place-order', [CheckoutController::class, 'placeorder']);
-Route::post('proceed-to-pay', [CheckoutController::class, 'proceedtopay']);
+Route::post('place-order', [checkoutController::class, 'placeorder']);
+Route::post('proceed-to-pay', [checkoutController::class, 'proceedtopay']);
 
 Route::get('user-dashboard',[UserController::class, 'index']);
 Route::get('view-order/{id}', 'UserController@vieworder');
