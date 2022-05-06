@@ -5,8 +5,8 @@
 <div class="card container"style="margin-top:80px;">
    <header class="card-header bg-primary">
        <nav class="breadcrumb">
-           <a class="breadcrumb-item text-white" href="#">Orders</a>
-           <a class="breadcrumb-item text-white" href="#">View profile</a>
+        <a class="breadcrumb-item text-white" href="{{url('user-dashboard')}}">Orders</a>
+           <a class="breadcrumb-item text-white" href="{{url('view-profile')}}">profile</a>
            <span class="breadcrumb-item active text-white">Update password</span>
        </nav>
    </header>
