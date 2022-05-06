@@ -10,7 +10,7 @@ use App\Models\Cart;
  use App\Models\Order_items;
 use Illuminate\Http\Request;
 use  Illuminate\Support\Facades\Auth;
-use  Hash;
+use Illuminate\Support\Facades\Hash;
 
 
 class UserController extends Controller
