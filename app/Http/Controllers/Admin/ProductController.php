@@ -27,7 +27,7 @@ class ProductController extends Controller
 
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext ;
-            $file->move('assets/uploads/product/', $filename);
+            $file->move('public/assets/uploads/product/', $filename);
             $product->image = $filename;
          $product->name = $request->input('name');
          $product->category_id = $request->input('category_id');
@@ -60,14 +60,14 @@ public function update( Request $request, $id)
 {
     $product = Product::find($id);
 if ($request->hasFile('image')) {
-    $path = 'assets/uploads/product/'.$product->image;
+    $path = 'public/assets/uploads/product/'.$product->image;
     if (File::exists($path)) {
        File::delete($path);
     }
     $file = $request->file('image');
     $ext = $file->getClientOriginalExtension();
     $filename = time().'.'.$ext ;
-    $file->move('assets/uploads/product/', $filename);
+    $file->move('public/assets/uploads/product/', $filename);
     $product->image = $filename;
 
 }
@@ -93,7 +93,7 @@ public function delete($id)
 {
     $product = Product::find($id);
     if ($product->image) {
-    $path = 'assets/uploads/product/'.$product->image;
+    $path = 'public/assets/uploads/product/'.$product->image;
 
        if (File::exists($path)) {
        File::delete($path);
