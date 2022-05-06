@@ -19,7 +19,7 @@
                     <div class="">
                     </div>
                     <div class="price">
-                        <span class="h5 text-primary"> <b>${{ $product->selling_price }}</b> </span>
+                        <span class="h5 text-primary"> <b> &#8358 {{ $product->selling_price }}</b> </span>
                     </div>
                     @if ($product->quantity > 0)
                     <span class="badge bg-success">In Stock</span>

@@ -62,7 +62,7 @@
 
 
                 </div>
-           
+
             <div class="col-md-6">
 
                 <table class="table table-striped table-bordered table-inverse table-responsive">
@@ -79,7 +79,7 @@
                             <tr>
                                 <td scope="row">{{ $order->product->name }}</td>
                                 <td>{{ $order->Qty }}</td>
-                                <td>${{ $order->price }}</td>
+                                <td>&#8358 {{ $order->price }}</td>
                                 <td>
                                     <img src="{{asset('assets/uploads/product/'.$order->product->image)}}"
                                      alt="product image" class="w-25">
@@ -90,7 +90,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <h5><span class="float-end"> Grand Total: ${{$orders->total_price}}</span></h5>
+                <h5><span class="float-end"> Grand Total: &#8358 {{$orders->total_price}}</span></h5>
 
 
             </div>

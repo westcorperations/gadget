@@ -21,7 +21,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="" class="form-label">First Name</label>
-                                        <input type="text" name="firstname " id="" value="{{Auth::user()->name}}" class="form-control  firstname"required>
+                                        <input type="text" name="firstname" id="" value="{{Auth::user()->name}}"
+                                         class="form-control  firstname" required>
                                         <small class="text-danger"id="firstname_error"></small>
 
                                     </div>
@@ -29,7 +30,8 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="" class="form-label ">Last Name</label>
-                                            <input type="text" class="form-control lastname" name="lastname" value="{{Auth::user()->lastname}}" id="" placeholder=""required>
+                                            <input type="text" class="form-control lastname"
+                                        name="lastname" value="{{Auth::user()->lastname}}" id="" placeholder=""required>
                                             <small class="text-danger"id="lastname_error"></small>
 
                                         </div>
@@ -146,8 +148,8 @@
                                     <tr>
                                         <td scope="row">{{ $item->product->name }}</td>
                                         <td>{{ $item->product_qty }}</td>
-                                        <td>${{ $item->product->selling_price }}</td>
-                                        <td>${{ $item->product->selling_price * $item->product_qty }}</td>
+                                        <td> &#8358 {{ $item->product->selling_price }}</td>
+                                        <td> &#8358 {{ $item->product->selling_price * $item->product_qty }}</td>
                                     </tr>
                                 @endforeach
 

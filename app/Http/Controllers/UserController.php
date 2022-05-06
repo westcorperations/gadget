@@ -43,7 +43,7 @@ class UserController extends Controller
         $user->address2 = $request->input('address2');
         $user->city = $request->input('city');
         $user->state = $request->input('state');
-        $user->country = $request->input('country');
+    $user->country = $request->input('country');
 
         $user->dob = $request->input('dob');
         $user->update();

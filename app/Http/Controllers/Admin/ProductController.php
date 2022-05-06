@@ -24,7 +24,7 @@ class ProductController extends Controller
         $product = new Product();
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            
+
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext ;
             $file->move('assets/uploads/product/', $filename);
@@ -44,9 +44,9 @@ class ProductController extends Controller
          $product->meta_description = $request->input('meta_description');
          $product->meta_keyword = $request->input('meta_keyword');
          $product->save();
-         return redirect('products')->with('status', 'Product Added Successfully');
- 
- 
+         return redirect('products')->with('Status', 'Product Added Successfully');
+
+
      }
     }
     public function edit($id)
@@ -56,7 +56,7 @@ class ProductController extends Controller
         return view('admin.products.edit',compact('product','category'));
     }
 
-public function update( Request $request, $id) 
+public function update( Request $request, $id)
 {
     $product = Product::find($id);
 if ($request->hasFile('image')) {
@@ -64,7 +64,7 @@ if ($request->hasFile('image')) {
     if (File::exists($path)) {
        File::delete($path);
     }
-    $file = $request->file('image');      
+    $file = $request->file('image');
     $ext = $file->getClientOriginalExtension();
     $filename = time().'.'.$ext ;
     $file->move('assets/uploads/product/', $filename);
@@ -85,7 +85,7 @@ $product->meta_title = $request->input('meta_title');
 $product->meta_description = $request->input('meta_description');
 $product->meta_keyword = $request->input('meta_keyword');
 $product->update();
-return redirect('/products')->with('status', 'Product updated Successfully');
+return redirect('/products')->with('Status', 'Product updated Successfully');
 
 
 }
@@ -97,8 +97,8 @@ public function delete($id)
 
        if (File::exists($path)) {
        File::delete($path);
-          
-       } 
+
+       }
     }
        $product->delete();
        return redirect('products')->with('Status', 'Product Deleted Successfully');

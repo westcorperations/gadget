@@ -70,7 +70,7 @@
                                     <span class="badge bg-danger">out of stock</span>
                                 @endif
                             </div>
-                            <div class="cart-product-price">${{ $cartItem->product->selling_price }}</div>
+                            <div class="cart-product-price"> &#8358 {{ $cartItem->product->selling_price }}</div>
 
                             <input type="hidden" value="{{ $cartItem->product_id }}" class="id_product">
 

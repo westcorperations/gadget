@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="card-footer">
                                         <div class="product-price">
-                                            <span class="fs-6 fw-bolder">${{ $phone->selling_price }}</span> <br>
+                                            <span class="fs-6 fw-bolder"> &#8358 {{ $phone->selling_price }}</span> <br>
                                             <span class=" fw-bolder "> <small>Price</small> </span>
                                         </div>
                                         <input type="hidden" value="{{ $phone->id }}" class="phone_id">
@@ -144,7 +144,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="product-price">
-                                    <span class="fs-6 fw-bolder">${{ $laptop->selling_price }}</span> <br>
+                                    <span class="fs-6 fw-bolder">  &#8358 {{ $laptop->selling_price }}</span> <br>
                                     <span class=" fw-bolder "> <small>Price</small> </span>
                                 </div>
                                 <input type="hidden" value="{{ $laptop->id }}" class="laptop_id">
@@ -193,7 +193,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="product-price">
-                                    <span class="fs-6 fw-bolder">${{ $asset->selling_price }}</span> <br>
+                                    <span class="fs-6 fw-bolder"> &#8358 {{ $asset->selling_price }}</span> <br>
                                     <span class=" fw-bolder "> <small>Price</small> </span>
                                 </div>
                                 <input type="hidden" value="{{ $asset->id }}" class="assesories_id">

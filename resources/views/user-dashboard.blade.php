@@ -32,7 +32,7 @@
                         <tr>
                             <td scope="row">{{date('d-m-Y',strtotime($order->Created_at))}}</td>
                             <td>{{$order->tracking_number}}</td>
-                            <td>${{$order->total_price}}</td>
+                            <td>&#8358 {{$order->total_price}}</td>
                             <td>{{$order->status=='0' ?  'pending':'complete'}}</td>
 
                             <td>

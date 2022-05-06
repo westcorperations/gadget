@@ -33,8 +33,9 @@ return view('checkout', compact('cartitems'));
     {
         $order = new Order();
         $order->user_id = Auth::id();
-        $order->firstname = $request->input('firstname');
+
         $order->lastname = $request->input('lastname');
+    $order->firstname =  $request->input('firstname');
         $order->email = $request->input('email');
         $order->phone = $request->input('phone');
         $order->address1 = $request->input('address1');
@@ -70,7 +71,7 @@ return view('checkout', compact('cartitems'));
         }
 if (Auth::user()->address2 == NULL) {
     $user= User::where('id',Auth::id())->first();
-    $user->name = $request->input('name');
+    $user->name = $request->input('firstname');
     $user->lastname = $request->input('lastname');
     $user->phone = $request->input('phone');
     $user->address = $request->input('address1');
@@ -105,7 +106,7 @@ foreach($cartitems as $items)
 {
     $total_price+=$items->product->selling_price * $items->product_qty;
 }
-    $firstname = $request->input('firstname');
+    $firstname = $request->input('name');
     $lastname  = $request->input('lastname');
     $email  = $request->input('email');
     $phone  = $request->input('phone');

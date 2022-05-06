@@ -18,7 +18,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-6 mb-3">
-                       <select  class="form-select form-control" name="category_id" aria-label="Default select example">
+                       <select  class="form-select form-control" name="category_id" required aria-label="Default select example">
                            <option value="">Select a category </option>
                            @foreach ( $category as $item )
 

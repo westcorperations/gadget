@@ -79,7 +79,7 @@ var pincode = $('.pincode').val();
             $('#state_error').html('');
         }
         if(!country){
-            country_error = "Country Is Required!";
+            country_error = "Country Is Required! ";
             $('#country_error').html('');
             $('#country_error').html(country_error);
         }else{
