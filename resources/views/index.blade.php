@@ -83,7 +83,7 @@
                                     </div>
 
                                     <div class="card-img">
-                                        <img src="{{ asset('assets/uploads/product/' . $phone->image) }}" alt=""
+                                        <img src="{{ url('storage/uploads/product/' . $phone->image) }}" alt=""
                                             class="carousel-cell">
                                     </div>
                                     <div class="card-footer">
@@ -139,7 +139,7 @@
                             </div>
 
                             <div class="card-img">
-                                <img src="{{ asset('assets/uploads/product/' . $laptop->image) }}" alt=""
+                                <img src="{{ url('storage/uploads/product/' . $laptop->image) }}" alt=""
                                     class="carousel-cell">
                             </div>
                             <div class="card-footer">
@@ -188,7 +188,7 @@
                             </div>
 
                             <div class="card-img">
-                                <img src="{{ asset('assets/uploads/product/' . $asset->image) }}" alt="image"
+                                <img src="{{ url('storage/uploads/product/' . $asset->image) }}" alt="image"
                                     class="carousel-cell">
                             </div>
                             <div class="card-footer">

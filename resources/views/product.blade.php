@@ -8,7 +8,7 @@
 
             <div class="img-sec">
                 <div class="img-c">
-                    <img src="{{ asset('assets/uploads/product/' . $product->image) }}" alt="product image"
+                    <img src="{{ url('storage/uploads/product/' . $product->image) }}" alt="product image"
                         class="">
                 </div>
 

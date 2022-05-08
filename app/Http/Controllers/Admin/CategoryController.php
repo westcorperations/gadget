@@ -22,10 +22,10 @@ class CategoryController extends Controller
        $category = new Category();
        if ($request->hasFile('image')) {
            $file = $request->file('image');
-           
+
            $ext = $file->getClientOriginalExtension();
            $filename = time().'.'.$ext ;
-           $file->move('assets/uploads/category/', $filename);
+           $file->move(public_path('/storage/uploads/category/'), $filename);
            $category->image = $filename;
 
        }
@@ -38,29 +38,29 @@ class CategoryController extends Controller
         $category->meta_descrip = $request->input('meta_descrip');
         $category->meta_keyword = $request->input('meta_keyword');
         $category->save();
-        return redirect('/dashboard')->with('status', 'Category Added Successfully');
+        return redirect('/dashboard')->with(' Status', 'Category Added Successfully');
 
 
     }
 public function edit($id)
-{ 
+{
     $category = Category::find($id);
    return view('admin.category.edit', compact('category'));
-  
+
 }
 
 public function update( Request $request, $id)
 {
    $category = Category::find($id);
 if ($request->hasFile('image')) {
-    $path = 'assets/uploads/category/'.$category->image;
+    $path = public_path('/storage/uploads/category/').$category->image;
     if (File::exists($path)) {
        File::delete($path);
     }
-    $file = $request->file('image');      
+    $file = $request->file('image');
     $ext = $file->getClientOriginalExtension();
     $filename = time().'.'.$ext ;
-    $file->move('assets/uploads/category/', $filename);
+    $file->move(public_path('/storage/uploads/category/'), $filename);
     $category->image = $filename;
 
 }
@@ -81,17 +81,17 @@ public function delete($id)
 {
     $category = Category::find($id);
     if ($category->image) {
-    $path = 'assets/uploads/category/'.$category->image;
+    $path = public_path('/storage/uploads/category/').$category->image;
 
        if (File::exists($path)) {
        File::delete($path);
-          
-       } 
+
+       }
     }
        $category->delete();
        return redirect('categories')->with('Status', 'Category Deleted Successfully');
 
-   
+
 }
 
 }

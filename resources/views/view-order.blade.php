@@ -81,7 +81,7 @@
                                 <td>{{ $order->Qty }}</td>
                                 <td>&#8358 {{ $order->price }}</td>
                                 <td>
-                                    <img src="{{asset('assets/uploads/product/'.$order->product->image)}}"
+                                    <img src="{{url('storage/uploads/product/'.$order->product->image)}}"
                                      alt="product image" class="w-25">
                                 </td>
 

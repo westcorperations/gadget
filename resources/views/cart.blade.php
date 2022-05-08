@@ -60,7 +60,7 @@
                     <div class="cart_data">
                         <div class="product ">
                             <div class="product-image">
-                                <img src="{{ asset('assets/uploads/product/' . $cartItem->product->image) }}">
+                                <img src="{{url('storage/uploads/product/' . $cartItem->product->image) }}">
                             </div>
                             <div class="product-details">
                                 <div class="product-title">{{ $cartItem->product->name }}</div>

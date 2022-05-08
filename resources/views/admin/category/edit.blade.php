@@ -25,7 +25,7 @@
 
             <div class="row">
                 @if ($category->image)
-                <img src="{{url('assets/uploads/category/'.$category->image )}}" alt="" class="w-25">
+                <img src="{{url('storage/uploads/category/'.$category->image )}}" alt="" class="w-25">
                 @endif
                 <div class="col-md-12 col-12 mb-3">
                     <label for="">image</label>

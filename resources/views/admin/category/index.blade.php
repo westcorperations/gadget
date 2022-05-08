@@ -22,7 +22,7 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->description }}</td>
-                            <td><img src="{{ asset('assets/uploads/category/' . $item->image) }}" alt="mage"
+                            <td><img src="{{ url('storage/uploads/category/' . $item->image) }}" alt="image"
                                     class="w-25"></td>
                             <td> <a href="{{ url('edit/' . $item->id) }}"> <button class=" btn-success">Edit</button></a>
                             </td>
