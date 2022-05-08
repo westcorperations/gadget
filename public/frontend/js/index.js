@@ -52,7 +52,7 @@ $(function () {
             },
             success: function (response) {
                swal(response.status,"success");
-                // window.location.reload();
+                 window.location.reload();
             }
         });
 
@@ -60,6 +60,34 @@ $(function () {
 });
 
 
+$(function () {
+    $('.categoryaddtocart').click(function (e) {
+        e.preventDefault();
+        var product_id = $(this).closest('.category_data').find('.category_id').val();
+        var product_qty = "1";
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            method: "POST",
+            url: "/add-to-cart",
+            data: {
+                'product_id': product_id,
+                'product_qty': product_qty,
+
+            },
+            success: function (response) {
+
+              swal("",response.status,"success");
+                window.location.reload();
+
+            }
+        });
+
+    });
+});
 $(function () {
     $('.phoneaddtocart').click(function (e) {
         e.preventDefault();
