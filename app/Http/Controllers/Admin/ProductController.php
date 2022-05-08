@@ -37,13 +37,14 @@ class ProductController extends Controller
          $product->original_price = $request->input('cost_price');
          $product->selling_price = $request->input('selling_price');
          $product->quantity = $request->input('quantity');
+         $product->tax = $request->input('tax');
 
-         $product->status = $request->input('status')== True ? '1':'0';
+          $product->status = $request->input('status')== True ? '1':'0';
          $product->trending = $request->input('trending')== True ? '1':'0';
          $product->meta_title = $request->input('meta_title');
          $product->meta_description = $request->input('meta_description');
          $product->meta_keyword = $request->input('meta_keyword');
-         $product->save();
+          $product->save();
          return redirect('products')->with('Status', 'Product Added Successfully');
 
 

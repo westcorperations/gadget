@@ -40,6 +40,10 @@
                         <label for=""> cost price </label>
                             <input type="text" name="cost_price"  required class="form-control">
                     </div>
+                    <div class="col-md-3 col-3 mb-3">
+                        <label for=""> Tax </label>
+                            <input type="text" name="tax"  required class="form-control">
+                    </div>
 
                     <div class="col-md-3 col-3 mb-3">
                         <label for=""> Quantity</label>
